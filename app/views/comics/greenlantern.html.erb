@@ -1,0 +1,34 @@
+<div class="text-center">
+  <h1>Green Lantern Comics</h1>
+</div>
+<div class="row">
+  <%= render partial: "buttons" %>
+  <table class="left col-4 text-center">
+    <tr>
+      <td><h3>Releases for: <%=@shipping_date%></h3></td>
+    </tr>
+    <% for release in @releases %>
+      <% if release.category == "DC COMICS" %>
+        <tr>
+          <% if release.title.include?("LANTERN") %>
+            <td><%= release.title %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    <% end %>
+  </table>
+  <table class="right col-4 text-center">
+      <tr>
+        <td><h3>Upcoming Releases</h3></td>
+      </tr>
+      <% for release in @upcoming_releases %>
+        <% if release.category == "DC COMICS" %>
+          <tr>
+            <% if release.title.include?("LANTERN") %>
+              <td><%= release.title %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
+</div>

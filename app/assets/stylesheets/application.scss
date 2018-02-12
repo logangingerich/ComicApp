@@ -1,0 +1,68 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+ @import "bootstrap";
+
+ html,body {
+   height: auto;
+ }
+body  {
+  font-family: 'Bangers', cursive;
+}
+.header {
+  background-color: black;
+  color: white;
+  padding-bottom: 8px;
+  padding-top: 5px;
+  font-size: 200%;
+}
+
+.left{
+  padding-top: 8px;
+  color: white;
+  background-color: rgba(0,0,0,.7);
+  text-shadow: 2px 2px #ff0000;
+}
+.right{
+  padding-top: 20px;
+  color: white;
+  background-color: rgba(0,0,0,.7);
+  text-shadow: 2px 2px #ff0000;
+}
+h2{
+  color: blue;
+  background-color: red;
+  text-shadow: none;
+}
+ .row {
+   background-image: url(http://www.mascontext.com/wp-content/uploads/2010/06/06_comic_book_movies_cover.jpg);
+   background-size: contain;
+   font-size: 200%;
+   text-align: center;
+   padding-right: 10%;
+   left: 0;
+ }
+.wrapper {
+  height: auto;
+  background-color: rgba(0,0,0,.7);
+}
+ .navigation {
+   height: 100vh;
+   font-size: 200%;
+   font-family: sans-serif;
+   background-color: rgba(0,0,0,.7);
+ }
+
+ button {
+   color: white;
+ }

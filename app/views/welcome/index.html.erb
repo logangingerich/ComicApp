@@ -1,0 +1,40 @@
+<div class="wrapper">
+  <div class="header text-center">
+    <h1>DC Comics Tracker</h1>
+    <p>Where your superhero dreams come true</p>
+  </div>
+  <div class="row">
+    <table class="col-4 text-center navigation">
+        <tr><td><a href="comics/flash" class="btn btn-primary btn-lg">The Flash</button></td></tr>
+        <tr><td><a href="comics/superman" class="btn btn-primary btn-lg">Superman</button></td></tr>
+        <tr><td><a href="comics/batman" class="btn btn-primary btn-lg">Batman</button></td></tr>
+        <tr><td><a href="comics/wonderwoman" class="btn btn-primary btn-lg">Wonder Woman</button></td></tr>
+        <tr><td><a href="comics/greenlantern" class="btn btn-primary btn-lg">Green Lantern</button></td></tr>
+        <tr><td><a href="comics/aquaman" class="btn btn-primary btn-lg">Aquaman</button></td></tr>
+    </table>
+    <table class="left col-4 text-center">
+      <tr>
+        <td><h2>Releases for: <%=@shipping_date%></h2></td>
+      </tr>
+      <% for release in @releases %>
+        <% if release.category == "MARVEL COMICS" || release.category == "DC COMICS" %>
+          <tr>
+            <td><%= release.title %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
+    <table class="right col-4 text-center">
+        <tr>
+          <td><h2>Upcoming Releases</h2></td>
+        </tr>
+        <% for release in @upcoming_releases %>
+          <% if release.category == "MARVEL COMICS" || release.category == "DC COMICS" %>
+            <tr>
+              <td><%= release.title %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      </table>
+  </div>
+</div>
